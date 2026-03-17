@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>conversi SUHU</h1>
+    <form>
+      <label for="temprature">Masukan suhu</label>
+      <input id="temprature" type="number" name="temprature" />
+      <label for="converts">Pilih suhu yang akan di konversi?</label>
+      <select name="converts" id="converts">
+        <option value="C" selected>Celcius</option>
+        <option value="F">Fahrentheit</option>
+        <option value="K">Kelvin</option>
+        <option value="R">Reamur</option>
+      </select>
+      <label for="convertsTo">Pilih suhu yang ingin di konversi?</label>
+      <select name="convertsTo" id="convertsTo">
+        <option value="C" selected>Celcius</option>
+        <option value="F">Fahrentheit</option>
+        <option value="K">Kelvin</option>
+        <option value="R">Reamur</option>
+      </select>
+      <button id="btn-convertion" type="submit">Conversi</button>
+    </form>
+
+    <div id="output"></div>
+    <script src="./scripts/main.js"></script>
+  </body>
+</html>
