@@ -3,30 +3,39 @@ const yellow = document.getElementById("yellow");
 const green = document.getElementById("green");
 
 function runYellowLight() {
-  setTimeout(() => {
-    red.classList.remove("red");
-    yellow.classList.add("yellow");
-    runGreenLight();
-  }, 3000);
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      red.classList.remove("red");
+      yellow.classList.add("yellow");
+      resolve("berhasil");
+    }, 3000);
+  });
 }
 
 function runGreenLight() {
-  setTimeout(() => {
-    green.classList.add("green");
-    yellow.classList.remove("yellow");
-    runRedLight();
-  }, 2000);
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      yellow.classList.remove("yellow");
+      green.classList.add("green");
+      resolve("berhasil");
+    }, 2000);
+  });
 }
 
 function runRedLight() {
-  setTimeout(() => {
-    green.classList.remove("green");
-    red.classList.add("red");
-  }, 3000);
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      green.classList.remove("green");
+      red.classList.add("red");
+      resolve("berhasil");
+    }, 3000);
+  });
 }
 
-function trafficLight() {
-  runYellowLight();
+async function trafficLight() {
+  await runYellowLight();
+  await runGreenLight();
+  await runRedLight();
 }
 
 trafficLight();

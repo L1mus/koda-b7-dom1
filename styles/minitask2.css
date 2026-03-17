@@ -46,3 +46,11 @@ main {
 .green {
   background-color: green;
 }
+
+.tiang {
+  width: 50px;
+  height: 100px;
+  background-color: grey;
+  position: absolute;
+  bottom: 0;
+}
